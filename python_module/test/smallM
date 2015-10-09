@@ -1,0 +1,4 @@
+obj = main.o hello1.o hello2.o
+all:$(obj)
+$(obj):%.o:%.c inc.h
+	gcc -c $< -o $@
